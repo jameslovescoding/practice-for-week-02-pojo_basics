@@ -12,6 +12,18 @@ valuePair(object1, object2, 'name'); // => [ 'One', 'Two' ]
 
 function valuePair(obj1, obj2, key) {
   // Your code here
+  let arr = [];
+  arr.push(returnValue(obj1, key));
+  arr.push(returnValue(obj2, key));
+  return arr;
+}
+
+function returnValue(obj, key) {
+  if (key in obj) {
+    return obj[key];
+  } else {
+    return null;
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
